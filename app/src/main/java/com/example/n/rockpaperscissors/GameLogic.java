@@ -39,4 +39,5 @@ public class GameLogic {
         } else {
             return "You suck!";}
     }
+
 }

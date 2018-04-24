@@ -26,7 +26,7 @@ public enum HandType {
     public static HandType typeByName(String name) {
         for (HandType type : HandType.values()) {
 
-            if (name == type.getHand()) {
+            if (name.equals(type.getHand())) {
                 return type;
             }
         }
