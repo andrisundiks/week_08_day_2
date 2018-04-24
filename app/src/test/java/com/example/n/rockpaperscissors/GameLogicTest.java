@@ -11,17 +11,22 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 public class GameLogicTest {
-    List<String> arrL;
+    List<HandType> arrL;
 
 
     @Before
     public void before(){
-        arrL = new ArrayList<>(Arrays.asList("Rock", "Paper", "Scissors"));
+        arrL = new ArrayList<>(Arrays.asList(HandType.ROCK, HandType.PAPER, HandType.SCISSORS));
     }
 
     @Test
     public void computerHasMove(){
-        String result = GameLogic.computerMove();
+        HandType result = GameLogic.computerMove();
         assertEquals(true, arrL.contains(result));
+    }
+
+    @Test
+    public void gameCanCompareHands(){
+        assertEquals(String.class, GameLogic.compareHands("Rock").getClass());
     }
 }

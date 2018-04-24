@@ -9,7 +9,7 @@ public enum HandType {
     private String hand;
     private int index;
 
-    HandType(String hand, int index){
+    HandType(String hand, int index) {
         this.hand = hand;
         this.index = index;
 
@@ -21,5 +21,16 @@ public enum HandType {
 
     public int getIndex() {
         return index;
+    }
+
+    public static HandType typeByName(String name) {
+        for (HandType type : HandType.values()) {
+
+            if (name == type.getHand()) {
+                return type;
+            }
+        }
+
+        return null;
     }
 }
